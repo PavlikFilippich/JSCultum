@@ -101,7 +101,7 @@ const arr = [
   }
 ]
 
-function edit(arr) {
+function editName(arr) {
   return arr.map(function (item) {
     let newItem = Object.assign({}, item);
     newItem.label = item.name;
@@ -109,4 +109,32 @@ function edit(arr) {
     return newItem;
   }) 
 }
-console.log(edit(arr));
+function isNumber(item){
+   return item.match(/^[0-9]+$/) != null;
+}
+function editNumber(arr) {
+   return arr.map(function(item) {
+   let newItem = Object.assign({}, item);
+   Object.keys(newItem).forEach(item =>newItem[item] = (isNumber(newItem[item]) ? parseInt(newItem[item]) : newItem[item]));
+   return newItem;
+   });
+}
+
+function edits(arr){
+   return arr.map(function(item){
+   let itemToSend = {};
+   let newItem = Object.assign({}, item);
+   Object.keys(newItem).forEach(item => {itemToSend[item.replace("_", " ")] = newItem[item]}); 
+   return itemToSend;  
+   })
+}
+console.log(editName(arr));
+console.log(editNumber(arr));
+console.log(edits(arr));
+
+
+function () {
+   arr.map() {
+     let convertToDigit 
+   }
+}
