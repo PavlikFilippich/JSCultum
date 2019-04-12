@@ -128,13 +128,17 @@ function edits(arr){
    return itemToSend;  
    })
 }
+
+function getGender(arr, gender) {
+   let obj = arr.filter(function(arr){
+      return arr.gender === gender ? arr.gender : '';
+   });
+   let itemGender = {};
+   let newItem = 0;
+   Object.keys(obj).forEach (item => (obj[item]!==null) ? (itemGender[newItem]=obj[item] , newItem++): '');
+   return itemGender;
+}
 console.log(editName(arr));
 console.log(editNumber(arr));
 console.log(edits(arr));
-
-
-function () {
-   arr.map() {
-     let convertToDigit 
-   }
-}
+console.log(getGender(arr,"female"));
