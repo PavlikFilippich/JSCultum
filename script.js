@@ -134,6 +134,24 @@ function getGender (arr, gender){
    return arr.filter(item => item.gender === gender)
 };
 
+function pushObjects(arr,item){ //функция добавляет новый обьект в массив третьим по счету
+   let startArr = arr.slice(0,2);
+   let endArr = arr.slice(2);
+   let newArr = [...startArr,item,...endArr];
+   return newArr;
+}
+
+const newObject = pushObjects(arr,{
+   "name":"some name",
+   "height":"182",
+   "mass":"77",
+   "hair_color":"black",
+   "skin_color":"red",
+   "eye_color":"brown",
+   "birth_year":"XXXXXX",
+   "gender":"female"
+});
+
 
 
 console.log(editName(arr));  //Функция заменяет "name" на "label"
