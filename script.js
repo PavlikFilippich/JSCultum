@@ -152,8 +152,13 @@ const newObject = pushObjects(arr,{
    "gender":"female"
 });
 
+function searchName(arr,name ){
+   const newItem = arr.find(item=>item.name==name);
+   return newItem || "not found";
+};
 
 
+console.log(searchName(arr,"Biggs Darklighter")); // функция выводит обьект где идет соответсвие с именем который мы передали вторым аругментом( если не совпадает выводит смс : не найдено)ж
 console.log(editName(arr));  //Функция заменяет "name" на "label"
 console.log(editNumber(arr)); // функция переобразовывает строку где одни числа в числовое значение
 console.log(edits(arr)); // функция ищет в ключе "_"  и заменяет его на  пробел
