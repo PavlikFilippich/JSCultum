@@ -162,6 +162,17 @@ function sortArr([...arr], gender) {
    return arr.sort((a,b) => (b.gender == gender) - (a.gender == gender));
 }
 
+function indexArr (arr){
+   const newArr = arr.slice(2,5);
+   return newArr;
+}
+
+function deleteHeight(arr,height){
+  return arr.filter(item => item.height !== height);
+}
+
+console.log(deleteHeight(arr,"202")); // выводить массив без того обьекта , гед высота соответсвует второму аргументу
+console.log(indexArr(arr));// вернуть 3 обьекта начиная со второго индекса
 console.log(sortArr(arr,"male")); // функция выводит сперва те обьекты , которые переданы втоорым аргументом
 console.log(searchName(arr,"Biggs Darklighter")); // функция выводит обьект где идет соответсвие с именем который мы передали вторым аругментом( если не совпадает выводит смс : не найдено)ж
 console.log(editName(arr));  //Функция заменяет "name" на "label"
