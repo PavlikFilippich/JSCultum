@@ -158,6 +158,11 @@ function searchName(arr,name ){
 };
 
 
+function sortArr([...arr], gender) {
+   return arr.sort((a,b) => (b.gender == gender) - (a.gender == gender));
+}
+
+console.log(sortArr(arr,"male")); // функция выводит сперва те обьекты , которые переданы втоорым аргументом
 console.log(searchName(arr,"Biggs Darklighter")); // функция выводит обьект где идет соответсвие с именем который мы передали вторым аругментом( если не совпадает выводит смс : не найдено)ж
 console.log(editName(arr));  //Функция заменяет "name" на "label"
 console.log(editNumber(arr)); // функция переобразовывает строку где одни числа в числовое значение
