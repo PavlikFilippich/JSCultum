@@ -180,6 +180,10 @@ function tfSkin_color(arr,skin_color){  //Выводить truе если най
    return arr.some(item => item.skin_color === skin_color) ;
 };
 
+function sortMass (arr){   // сортировка массы от меньшего к большемуук                     
+   return arr.sort((one,two) => Number(one.mass) - Number(two.mass));
+}
+
 console.log(deleteHeight(arr,"202")); // выводить массив без того обьекта , гед высота соответсвует второму аргументу
 console.log(indexArr(arr));// вернуть 3 обьекта начиная со второго индекса
 console.log(sortArr(arr,"male")); // функция выводит сперва те обьекты , которые переданы втоорым аргументом
