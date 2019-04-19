@@ -171,6 +171,15 @@ function deleteHeight(arr,height){
   return arr.filter(item => item.height !== height);
 }
 
+function concatArr(arr,arr){                  //Обьединяет 2 массива
+   const twoArr = [...arr,...arr]
+   return twoArr;
+}
+
+function tfSkin_color(arr,skin_color){  //Выводить truе если найден сответсвующий елмент
+   return arr.some(item => item.skin_color === skin_color) ;
+};
+
 console.log(deleteHeight(arr,"202")); // выводить массив без того обьекта , гед высота соответсвует второму аргументу
 console.log(indexArr(arr));// вернуть 3 обьекта начиная со второго индекса
 console.log(sortArr(arr,"male")); // функция выводит сперва те обьекты , которые переданы втоорым аргументом
